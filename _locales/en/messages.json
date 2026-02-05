@@ -1,0 +1,20 @@
+{
+  "extensionName": {
+    "message": "Print As Is"
+  },
+  "extensionDescription": {
+    "message": "Captures a full-page screenshot and prints it exactly as seen on screen."
+  },
+  "printButton": {
+    "message": "Print Page"
+  },
+  "printDescription": {
+    "message": "Captures and prints the page exactly as displayed"
+  },
+  "processing": {
+    "message": "Processing..."
+  },
+  "error": {
+    "message": "Error!"
+  }
+}

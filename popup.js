@@ -1,6 +1,11 @@
+// Initialize i18n strings
+document.querySelectorAll('[data-i18n]').forEach(el => {
+    el.textContent = browser.i18n.getMessage(el.dataset.i18n);
+});
+
 document.getElementById('captureBtn').addEventListener('click', async () => {
     const btn = document.getElementById('captureBtn');
-    btn.textContent = "Processing...";
+    btn.textContent = browser.i18n.getMessage('processing');
     btn.disabled = true;
 
     try {
@@ -19,12 +24,12 @@ document.getElementById('captureBtn').addEventListener('click', async () => {
         window.close();
     } catch (error) {
         console.error("Failed to execute script:", error);
-        btn.textContent = "Error!";
+        btn.textContent = browser.i18n.getMessage('error');
         btn.style.backgroundColor = "#666";
 
         // Reset button after delay so user can try again
         setTimeout(() => {
-            btn.textContent = "Print Page";
+            btn.textContent = browser.i18n.getMessage('printButton');
             btn.style.backgroundColor = "";
             btn.disabled = false;
         }, 2000);

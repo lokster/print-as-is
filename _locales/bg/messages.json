@@ -1,0 +1,20 @@
+{
+  "extensionName": {
+    "message": "Принтирай както е"
+  },
+  "extensionDescription": {
+    "message": "Заснема цялата страница и я принтира точно както се вижда на екрана."
+  },
+  "printButton": {
+    "message": "Принтирай"
+  },
+  "printDescription": {
+    "message": "Заснема и принтира страницата точно както се вижда"
+  },
+  "processing": {
+    "message": "Обработка..."
+  },
+  "error": {
+    "message": "Грешка!"
+  }
+}

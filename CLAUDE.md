@@ -68,7 +68,7 @@ There is no build system. Files are edited directly and packaged as an XPI (ZIP 
 
 **To package the extension:**
 ```bash
-zip -r print-as-is.xpi manifest.json popup.html popup.js background.js content.js icon.svg
+zip -r print-as-is.xpi manifest.json popup.html popup.js background.js content.js icon.svg _locales
 ```
 
 **To test in Firefox:**
@@ -105,6 +105,7 @@ Three-tier WebExtension pattern:
 - Auto-reloads page after print dialog closes
 - `hasRunPrintAsIs` flag prevents duplicate execution
 - 600ms initial delay for popup close (crucial for Android)
+- Localized UI (English, Bulgarian) via `_locales/` and `browser.i18n`
 
 ### Browser API
 

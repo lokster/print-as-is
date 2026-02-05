@@ -1,8 +1,9 @@
 {
   "manifest_version": 3,
-  "name": "Print As Is",
+  "name": "__MSG_extensionName__",
   "version": "0.1.0",
-  "description": "Captures a full-page screenshot and prints it exactly as seen on screen.",
+  "description": "__MSG_extensionDescription__",
+  "default_locale": "en",
   "permissions": [
     "activeTab",
     "scripting"
