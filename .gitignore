@@ -1,0 +1,4 @@
+sign.sh
+*.xpi
+web-ext-artifacts/
+.amo-upload-uuid
