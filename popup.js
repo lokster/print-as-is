@@ -15,12 +15,12 @@ document.getElementById('captureBtn').addEventListener('click', async () => {
             throw new Error("No active tab found");
         }
 
-        await browser.scripting.executeScript({
+        // Fire and forget - don't await, close immediately
+        browser.scripting.executeScript({
             target: { tabId: tab.id },
             files: ['content.js']
         });
 
-        // Close immediately so the Android UI gets out of the way
         window.close();
     } catch (error) {
         console.error("Failed to execute script:", error);

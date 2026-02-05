@@ -87,7 +87,7 @@ Get API credentials at: https://addons.mozilla.org/developers/addon/api/key/
 
 Three-tier WebExtension pattern:
 
-1. **popup.html / popup.js** - UI layer. Button click injects content script into active tab, then closes immediately.
+1. **popup.html / popup.js** - UI layer. Button click injects content script into active tab using fire-and-forget pattern (no await), then closes immediately.
 
 2. **background.js** - Service worker bridge. Handles `capture_visible_tab` messages using `browser.tabs.captureVisibleTab()` API with optional `rect` and `scale` parameters for full-page capture.
 
@@ -104,8 +104,9 @@ Three-tier WebExtension pattern:
 - Preserves document head (title, meta tags, favicons)
 - Auto-reloads page after print dialog closes
 - `hasRunPrintAsIs` flag prevents duplicate execution
-- 600ms initial delay for popup close (crucial for Android)
+- 600ms initial delay before capture (allows popup to close, crucial for Android)
 - Localized UI (English, Bulgarian) via `_locales/` and `browser.i18n`
+- Popup uses fire-and-forget script injection for immediate close
 
 ### Browser API
 
